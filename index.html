@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="foldercss/style.css">
+  <style>
+  .image {
+    
+    margin-top: 500px;
+    background-image: url("foty/owl.jpg");
+    min-height: 800px; 
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <script type = "text/javascript">
+
+    var numer = 0;
+    
+    function schowaj()
+    {
+      $("#slider").fadeOut(500);
+    }
+
+    function zmienslajd()
+    {
+      numer++;
+      if(numer >2) numer = 1;
+      var plik = "<img src =\"foty/targ" + numer + ".jpg\" id = \"aemond\"/>"
+
+      document.getElementById("slider").innerHTML = plik;
+      $("#slider").fadeIn(500);
+
+      
+      setTimeout("zmienslajd()", 5000);
+      setTimeout("schowaj()",4500);
+    }
+  </script>
+
+
+
+</head>
+<body onload = "zmienslajd()">
+  <div id = "logowaniediv"><a href="login.html" id = "logowanie">Log in</a></div>
+  <div id = "registerdiv"><a href="regist.html">Register</a></div>
+  <a href="index.html" style="width: 300px;"><img src="foty/owl.jpg" id = "logo" alt=""></a>
+  <div class = "menu">
+      <a href="">Sklep </a>
+      <a href=""> Blog </a>
+      <a href=""> Newsletter</a>
+  </div>
+  <div class = "conteiner">
+    <div id = "slider"></div>
+    <article>
+      <h3>O nas</h3>
+      <p>ASDoinbsdainon inodasinoxasn nisodnioabsio onnajsbndj dbnobnads nio bdsaiobfadsiobdsaiob oasidbadsobibsaoidbodsai </p>
+      <h3>Lokalizacja</h3>
+      <p>ASDoinbsdainon inodasinoxasn nisodnioabsio onnajsbndj dbnobnads nio bdsaiobfadsiobdsaiob oasidbadsobibsaoidbodsai </p>
+      <h3>Przyszłość</h3>
+      <p>ASDoinbsdainon inodasinoxasn nisodnioabsio onnajsbndj dbnobnads nio bdsaiobfadsiobdsaiob oasidbadsobibsaoidbodsai </p>
+    </article>
+  </div>
+  <div class="image"> <img src="" alt="" ></div>
+  <footer id = "footer">Bartek Ruszkowski</footer>
+</body>
+</html>
